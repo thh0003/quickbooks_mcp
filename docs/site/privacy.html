@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <nav>
+    <a href="./">Home</a>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="terms.html">Terms of service</a>
+    <a href="disconnect.html">Disconnect</a>
+  </nav>
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">QuickBooks Time &amp; Invoice Connector, operated by YOUR COMPANY NAME. Last updated 3 November 2026.</p>
+
+  <h2>Who we are</h2>
+  <p>The QuickBooks Time &amp; Invoice Connector ("the connector") is an internal software tool built and operated by YOUR COMPANY NAME for its own bookkeeping. It is not offered to the public.</p>
+
+  <h2>What data the connector accesses</h2>
+  <p>When an operator connects a QuickBooks Online company, the connector receives an OAuth 2.0 access token and refresh token under Intuit's Accounting scope. Using those tokens it reads and writes the following records in that one company only:</p>
+  <ul>
+    <li>Customers, employees and vendors (names and identifiers), to resolve who did work and for whom.</li>
+    <li>Service items and their prices.</li>
+    <li>Time activities: it creates and reads them.</li>
+    <li>Invoices: it creates them from time activities.</li>
+  </ul>
+  <p>It does not access payroll, banking, payments, tax filings or personal identifiers such as social security numbers.</p>
+
+  <h2>Where data is stored</h2>
+  <p>The connector runs entirely on the operator's own computer. OAuth tokens and the company identifier are stored in a file on that computer, readable only by the operator's user account. Accounting records are read from QuickBooks when a request is made and are not copied to any database or server. No data is transmitted to any party other than Intuit's QuickBooks Online API over HTTPS.</p>
+
+  <h2>How data is used</h2>
+  <p>Solely to log time and create invoices in the authorised company at the operator's request. Data is never sold, shared, used for advertising, or used to train any model.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>Tokens remain on the operator's computer until the operator deletes the token file or disconnects the connector in QuickBooks (Apps → My apps), after which the tokens are revoked by Intuit and no longer usable. Time entries and invoices created by the connector live in QuickBooks Online and are governed by Intuit's own retention and the company's bookkeeping practices.</p>
+
+  <h2>Security</h2>
+  <p>Credentials are stored with file permissions restricted to the operator. Access tokens expire after one hour and are refreshed automatically; refresh tokens expire after 100 days of non-use.</p>
+
+  <h2>Changes</h2>
+  <p>Changes to this policy will be posted at this address with an updated date.</p>
+
+  <h2>Contact</h2>
+  <p>YOUR COMPANY NAME, <a href="mailto:contact@example.com">contact@example.com</a>.</p>
+
+  <footer>Intuit and QuickBooks are trademarks of Intuit Inc. The connector is not affiliated with or endorsed by Intuit.</footer>
+</main>
+</body>
+</html>

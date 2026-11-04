@@ -1,0 +1,38 @@
+[project]
+name = "qbo-mcp"
+version = "0.1.0"
+description = "Local MCP server that lets Claude Code log time and invoice clients in QuickBooks Online."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "mcp>=2.3,<3",
+    "python-quickbooks>=0.9.12",
+    "intuit-oauth>=1.2.6",
+    "python-dotenv>=1.0",
+    "pydantic>=2",
+]
+
+[project.scripts]
+qbo-mcp = "qbo_mcp.__main__:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "anyio>=4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qbo_mcp"]
+
+[tool.basedpyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p anyio"

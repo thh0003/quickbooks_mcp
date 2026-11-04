@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Disconnected</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <nav>
+    <a href="./">Home</a>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="terms.html">Terms of service</a>
+    <a href="disconnect.html">Disconnect</a>
+  </nav>
+
+  <h1>Disconnected from QuickBooks</h1>
+  <p class="meta">QuickBooks Time &amp; Invoice Connector, operated by YOUR COMPANY NAME.</p>
+
+  <p>The connector's access to your QuickBooks Online company has been revoked by Intuit. It can no longer read or write anything in that company.</p>
+
+  <h2>Finish cleaning up on your computer</h2>
+  <p>The now-invalid tokens are still in the connector's token file. Delete it to remove them:</p>
+  <p><code>rm ~/.qbo_mcp/tokens-production.json</code> (or <code>tokens-sandbox.json</code> for a sandbox company, or the path set in <code>QBO_TOKEN_PATH</code>).</p>
+
+  <h2>Reconnecting later</h2>
+  <p>Run <code>uv run qbo-mcp authorize</code> again and approve access in QuickBooks. Time entries and invoices already created remain in QuickBooks; disconnecting does not delete them.</p>
+
+  <h2>Contact</h2>
+  <p>YOUR COMPANY NAME, <a href="mailto:contact@example.com">contact@example.com</a>.</p>
+
+  <footer>Intuit and QuickBooks are trademarks of Intuit Inc. The connector is not affiliated with or endorsed by Intuit.</footer>
+</main>
+</body>
+</html>
