@@ -108,7 +108,7 @@ Intuit unlocks an app's **Production** keys only after the app has a host domain
 | Privacy policy URL | `https://yourname.github.io/quickbooks_mcp/privacy.html` |
 | Terms of service URL | `https://yourname.github.io/quickbooks_mcp/terms.html` |
 
-To publish: replace `YOUR COMPANY NAME`, `contact@example.com` and `YOUR STATE OR COUNTRY` in the four HTML files, push the repository to GitHub, and under **Settings → Pages** set the source to **GitHub Actions**. The workflow in `.github/workflows/pages.yml` uploads only `docs/site/` (never the planning documents) on each push to `main`. Any other HTTPS host works too; only the URLs change.
+To publish: push the repository to GitHub (public, unless the account's plan allows Pages on private repositories) and under **Settings → Pages** set the source to **GitHub Actions**. The workflow in `.github/workflows/pages.yml` uploads only `docs/site/` (never the planning documents) on each push to `main`. Any other HTTPS host works too; only the URLs change.
 
 These pages are informational. The OAuth redirect URI is a separate setting on the Keys & credentials page, and the server never reads the pages.
 
